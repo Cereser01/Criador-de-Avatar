@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
 import 'main.dart';
 
 class Seletor extends StatefulWidget{
@@ -25,9 +26,27 @@ class SeletorInstance extends State<Seletor> {
 
             Container(
               alignment: Alignment.center,
-              padding: const EdgeInsets.all(10),
-              child: const Text("Responda as perguntas para criarmos seu avatar perfeito!",style: TextStyle(fontSize: 20)),
+              padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
+              child: const Text(
+                  "Bem vindo ao Criador de Avatar!\n\nResponda as perguntas para criarmos seu avatar perfeito!",
+                  style: TextStyle(fontSize: 20)),
             ),
+
+            Container(
+              padding: const EdgeInsets.only(top: 40),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
+                child: const Padding(padding: EdgeInsets.all(15), child: Text(
+                  "Começar",
+                  style: TextStyle(fontSize: 30),),),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TipoCorpo())
+                  );
+                },
+              ),
+            )
 
           ], // children
         ),
