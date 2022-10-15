@@ -17,7 +17,7 @@ class SeletorInstance extends State<Seletor> {
       appBar: AppBar(
         backgroundColor: color2,
         title: const Text("Crie seu avatar!"),
-        leading: const Text("Inserir logo aqui."),
+        leading: Image.asset("logo.png"),
       ),
       body: Container(
         padding: const EdgeInsets.all(10),
@@ -29,7 +29,11 @@ class SeletorInstance extends State<Seletor> {
               padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
               child: const Text(
                   "Bem vindo ao Criador de Avatar!\n\nResponda as perguntas para criarmos seu avatar perfeito!",
-                  style: TextStyle(fontSize: 20)),
+                  style: TextStyle(
+                      color: color2,
+                      fontSize: 20
+                  )
+              ),
             ),
 
             Container(

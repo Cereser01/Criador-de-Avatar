@@ -16,12 +16,35 @@ class ResultorInstance extends State<Resultor> {
       appBar: AppBar(
         backgroundColor: color2,
         title: const Text("Esse é você!"),
-        leading: const Text("Inserir logo aqui."),
+        leading: Image.asset("logo.png"),
       ),
       body: Container(
-        padding: const EdgeInsets.all(10),
+        padding: EdgeInsets.all(10),
         child: ListView(
           children: [
+
+            Container(
+              alignment: Alignment.topCenter,
+              decoration: BoxDecoration(
+                //TIPO DE CORPO
+                image: corpo
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  //BARBA
+                  image: barba
+                ),
+                child: Container(
+                  decoration: BoxDecoration(
+                    //OCULOS
+                    image: oculos
+                  ),
+                  child: Image.asset("avatar_blank.png"),
+                ),
+              ),
+            ),
+
+
 
           ], // children
         ),

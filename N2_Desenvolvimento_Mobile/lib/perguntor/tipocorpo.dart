@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
+import 'package:n2_desenvolvimento_mobile/resultor.dart';
+import 'usaoculos.dart';
 
 class TipoCorpo extends StatefulWidget{
   const TipoCorpo({Key? key}) : super(key: key);
@@ -22,18 +24,40 @@ class TipoCorpoInstance extends State<TipoCorpo> {
         child: ListView(
         children: [
 
-            Container(
-              padding: const EdgeInsets.all(10),
-              child: const Text("QUAL É SEU TIPO CORPORAL?"),
-            ),
+          //TEXTO DA PERGUNTA
+          Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
+            child: const Text(
+                "QUAL É SEU TIPO CORPORAL?",
+                style: TextStyle(fontSize: 40)),
+          ),
 
-            /*Container(
-            child: ,
-            )*/
+          Padding( padding: EdgeInsets.only(top: 20), child:
+          ElevatedButton(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
+              onPressed: (){
+                corpo = body_Male;
+                Navigator.push(context, MaterialPageRoute(builder: (context) => UsaOculos()));
+                },
+              child: Padding(padding: EdgeInsets.all(20),child:Text("Masculino",style: TextStyle(fontSize: 30),),)
+          ),
+          ),
 
-        ] //children
-      ),
+          Padding( padding: EdgeInsets.only(top: 20), child:
+          ElevatedButton(
+              style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
+              onPressed: (){
+                corpo = body_Fem;
+                Navigator.push(context, MaterialPageRoute(builder: (context) => UsaOculos()));
+              },
+              child: Padding(padding: EdgeInsets.all(20),child:Text("Feminino",style: TextStyle(fontSize: 30),),)
+          ),
+          ),
+        ],
+        )
     ),
     );
   }
+
 }
