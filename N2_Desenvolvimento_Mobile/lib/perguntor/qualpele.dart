@@ -28,7 +28,7 @@ class QualPeleInstance extends State<QualPele> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "QUAL A COR DA PELE?",
+                    "Qual destas cores é sua favorita?",
                     style: TextStyle(fontSize: 40)),
               ),
 
@@ -45,7 +45,7 @@ class QualPeleInstance extends State<QualPele> {
                     ProximaPergunta(context);
                   },
 
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("VERMELHA",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("VERMELHO",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -101,9 +101,8 @@ class QualPeleInstance extends State<QualPele> {
         ),
       ),
     );
-  }
-
-}
+  } // build
+} // class
 
 void ProximaPergunta (context){
 

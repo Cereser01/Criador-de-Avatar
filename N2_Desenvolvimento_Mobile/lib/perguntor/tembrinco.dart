@@ -28,7 +28,7 @@ class TemBrincoInstance extends State<TemBrinco> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "VOCÊ TEM BRINCO?",
+                    "Qual destes minerais te agrada mais?",
                     style: TextStyle(fontSize: 40)),
               ),
 
@@ -44,7 +44,7 @@ class TemBrincoInstance extends State<TemBrinco> {
                     ProximaPergunta(context);
                   },
 
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Sim",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Ouro",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -55,7 +55,7 @@ class TemBrincoInstance extends State<TemBrinco> {
                     brinco = blank;
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Não gosto de minerais",style: TextStyle(fontSize: 30),),)
               ),
               ),
 

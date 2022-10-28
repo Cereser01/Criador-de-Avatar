@@ -28,7 +28,7 @@ class TemBarbaInstance extends State<TemBarba> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "VOCÊ TEM BARBA?",
+                    "Qual destes animais te representa espiritualmente?",
                     style: TextStyle(fontSize: 40)),
               ),
 
@@ -44,7 +44,7 @@ class TemBarbaInstance extends State<TemBarba> {
                     ProximaPergunta(context);
                   },
 
-                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Sim",style: TextStyle(fontSize: 30),),)
+                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Bode",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -55,7 +55,7 @@ class TemBarbaInstance extends State<TemBarba> {
                     barba = blank;
                     ProximaPergunta(context);
                   },
-                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
+                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Golfinho",style: TextStyle(fontSize: 30),),)
               ),
               ),
 

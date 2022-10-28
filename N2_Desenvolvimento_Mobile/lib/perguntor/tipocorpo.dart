@@ -28,7 +28,7 @@ class TipoCorpoInstance extends State<TipoCorpo> {
             alignment: Alignment.center,
             padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
             child: const Text(
-                "QUAL É SEU TIPO CORPORAL?",
+                "Qual é seu tipo corporal?",
                 style: TextStyle(fontSize: 40)),
           ),
 

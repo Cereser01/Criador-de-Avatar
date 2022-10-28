@@ -28,8 +28,8 @@ class QualFundoInstance extends State<QualFundo> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "QUAL O FUNDO?",
-                    style: TextStyle(fontSize: 40)),
+                    "Em qual ambiente você se sentiria mais confortável?",
+                    style: TextStyle(fontSize: 30)),
               ),
 
               //BOTÃO DE RESPOSTA 1
@@ -41,7 +41,7 @@ class QualFundoInstance extends State<QualFundo> {
                     ProximaPergunta(context);
                   },
 
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Colorido",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Uma lata de tinta",style: TextStyle(fontSize: 20),),)
               ),
               ),
 
@@ -53,7 +53,7 @@ class QualFundoInstance extends State<QualFundo> {
                     fundo = fundo_gramado;
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Gramado",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Um gramado pacífico",style: TextStyle(fontSize: 20),),)
               ),
               ),
 
@@ -65,7 +65,7 @@ class QualFundoInstance extends State<QualFundo> {
                     fundo = fundo_cidade;
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Cidade",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("O centro de uma cidade",style: TextStyle(fontSize: 20),),)
               ),
               ),
 
@@ -77,7 +77,7 @@ class QualFundoInstance extends State<QualFundo> {
                     fundo = fundo_espaco;
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Espaço",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("A órbita da lua",style: TextStyle(fontSize: 20),),)
               ),
               ),
 

@@ -28,7 +28,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "QUAL A ROUPA?",
+                    "Qual sua roupa preferida?",
                     style: TextStyle(fontSize: 40)),
               ),
 
@@ -45,7 +45,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                     ProximaPergunta(context);
                   },
 
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("CAMISETA",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Camiseta",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -61,7 +61,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                     }
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("VESTIDO",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Vestido",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -77,7 +77,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                     }
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("MACACÃO",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Macacão",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -93,7 +93,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                     }
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("TRIBAL",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Eu sou nudista",style: TextStyle(fontSize: 30),),)
               ),
               ),
 

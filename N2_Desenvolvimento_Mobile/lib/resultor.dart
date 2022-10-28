@@ -16,7 +16,7 @@ class ResultorInstance extends State<Resultor> {
       backgroundColor: color1,
       appBar: AppBar(
         backgroundColor: color2,
-        title: const Text("Esse é você!"),
+        title: const Text("Esse é o seu avatar!"),
         leading: Image.asset("logo.png"),
       ),
       body: Container(
@@ -74,7 +74,7 @@ class ResultorInstance extends State<Resultor> {
               child: ElevatedButton(
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                 child: const Padding(padding: EdgeInsets.all(15), child: Text(
-                  "Voltar ao começo",
+                  "Criar um novo",
                   style: TextStyle(fontSize: 30),),),
                 onPressed: () {
                   Navigator.of(context).popUntil(ModalRoute.withName("/Fundo"));

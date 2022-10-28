@@ -30,6 +30,7 @@ class SeletorInstance extends State<Seletor> {
               child: const Text(
                   "Bem-vindo ao Criador de Avatar!\n\nResponda as perguntas para criarmos seu avatar perfeito!",
                   style: TextStyle(
+                      fontWeight: FontWeight.bold,
                       color: color2,
                       fontSize: 20
                   )

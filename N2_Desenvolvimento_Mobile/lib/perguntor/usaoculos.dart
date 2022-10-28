@@ -30,8 +30,8 @@ class UsaOculosInstance extends State<UsaOculos> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "VOCÊ USA ÓCULOS?",
-                    style: TextStyle(fontSize: 40)),
+                    "Qual destes cristais representa melhor sua personalidade?",
+                    style: TextStyle(fontSize: 30)),
               ),
 
               Padding( padding: const EdgeInsets.only(top: 20), child:
@@ -46,7 +46,7 @@ class UsaOculosInstance extends State<UsaOculos> {
                     ProximaPergunta(context);
                   },
 
-                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Sim",style: TextStyle(fontSize: 30),),)
+                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Vidro",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -57,7 +57,7 @@ class UsaOculosInstance extends State<UsaOculos> {
                     oculos = blank;
                     ProximaPergunta(context);
                   },
-                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
+                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Rubi",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
