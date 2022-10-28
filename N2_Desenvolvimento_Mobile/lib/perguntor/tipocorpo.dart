@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/qualpele.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
 import 'package:n2_desenvolvimento_mobile/resultor.dart';
 import 'usaoculos.dart';
 
@@ -38,7 +40,7 @@ class TipoCorpoInstance extends State<TipoCorpo> {
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
               onPressed: (){
                 corpo = body_Male;
-                Navigator.push(context, MaterialPageRoute(builder: (context) => UsaOculos()));
+                ProximaPergunta(context);
                 },
               child: Padding(padding: EdgeInsets.all(20),child:Text("Masculino",style: TextStyle(fontSize: 30),),)
           ),
@@ -49,7 +51,7 @@ class TipoCorpoInstance extends State<TipoCorpo> {
               style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
               onPressed: (){
                 corpo = body_Fem;
-                Navigator.push(context, MaterialPageRoute(builder: (context) => UsaOculos()));
+                ProximaPergunta(context);
               },
               child: Padding(padding: EdgeInsets.all(20),child:Text("Feminino",style: TextStyle(fontSize: 30),),)
           ),
@@ -59,5 +61,12 @@ class TipoCorpoInstance extends State<TipoCorpo> {
     ),
     );
   }
+
+}
+
+
+void ProximaPergunta (context){
+
+  Navigator.push(context, MaterialPageRoute(builder: (context) => QualPele()));
 
 }

@@ -1,7 +1,6 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/usaoculos.dart';
 import 'package:n2_desenvolvimento_mobile/resultor.dart';
 
 class TemBarba extends StatefulWidget{
@@ -43,7 +42,7 @@ class TemBarbaInstance extends State<TemBarba> {
                     }else{
                       barba = barba_Fem;
                     }
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Resultor()));
+                    ProximaPergunta(context);
                   },
 
                   child: Padding(padding: EdgeInsets.all(20),child:Text("Sim",style: TextStyle(fontSize: 30),),)
@@ -55,7 +54,7 @@ class TemBarbaInstance extends State<TemBarba> {
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
                     barba = blank;
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Resultor()));
+                    ProximaPergunta(context);
                   },
                   child: Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
               ),
@@ -69,4 +68,9 @@ class TemBarbaInstance extends State<TemBarba> {
 
 }
 
+void ProximaPergunta (context){
+
+  Navigator.push(context, MaterialPageRoute(builder: (context) => UsaOculos()));
+
+}
 

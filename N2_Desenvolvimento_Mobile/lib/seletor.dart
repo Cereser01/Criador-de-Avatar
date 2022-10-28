@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/qualfundo.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
 import 'main.dart';
 
@@ -46,7 +47,7 @@ class SeletorInstance extends State<Seletor> {
                 onPressed: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TipoCorpo())
+                      MaterialPageRoute(builder: (context) => QualFundo())
                   );
                 },
               ),

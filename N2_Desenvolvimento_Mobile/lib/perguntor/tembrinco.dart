@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tembrinco.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/qualroupa.dart';
 import 'package:n2_desenvolvimento_mobile/resultor.dart';
-import 'tembarba.dart';
 
-
-class UsaOculos extends StatefulWidget{
-  const UsaOculos({Key? key}) : super(key: key);
+class TemBrinco extends StatefulWidget{
+  const TemBrinco({Key? key}) : super(key: key);
 
   @override
-  State<UsaOculos> createState() => UsaOculosInstance();
+  State<TemBrinco> createState() => TemBrincoInstance();
 }
 
-class UsaOculosInstance extends State<UsaOculos> {
+class TemBrincoInstance extends State<TemBrinco> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +29,7 @@ class UsaOculosInstance extends State<UsaOculos> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "VOCÊ USA ÓCULOS?",
+                    "VOCÊ TEM BRINCO?",
                     style: TextStyle(fontSize: 40)),
               ),
 
@@ -41,9 +38,9 @@ class UsaOculosInstance extends State<UsaOculos> {
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
                     if(corpo == body_Male){
-                      oculos = oculos_Male;
+                      brinco = brinco_Male;
                     }else{
-                      oculos = oculos_Fem;
+                      brinco = brinco_Fem;
                     }
                     ProximaPergunta(context);
                   },
@@ -56,7 +53,7 @@ class UsaOculosInstance extends State<UsaOculos> {
               ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
-                    oculos = blank;
+                    brinco = blank;
                     ProximaPergunta(context);
                   },
                   child: Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
@@ -73,6 +70,8 @@ class UsaOculosInstance extends State<UsaOculos> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => TemBrinco()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => QualRoupa()));
 
 }
+
+

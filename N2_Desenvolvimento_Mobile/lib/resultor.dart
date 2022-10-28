@@ -22,8 +22,13 @@ class ResultorInstance extends State<Resultor> {
         padding: EdgeInsets.all(10),
         child: ListView(
           children: [
-
-            Container(
+          Container(
+          alignment: Alignment.topCenter,
+          decoration: BoxDecoration(
+            //FUNDO
+              image: fundo
+          ),
+          child: Container(
               alignment: Alignment.topCenter,
               decoration: BoxDecoration(
                 //TIPO DE CORPO
@@ -31,18 +36,37 @@ class ResultorInstance extends State<Resultor> {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  //BARBA
-                  image: barba
+                  //PELE
+                  image: pele
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    //OCULOS
-                    image: oculos
+                    //BARBA
+                    image: barba
                   ),
-                  child: Image.asset("avatar_blank.png"),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      //OCULOS
+                        image: oculos
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        //BRINCO
+                          image: brinco
+                      ),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          //ROUPA
+                            image: roupa
+                        ),
+                        child: Image.asset("avatar_blank.png"),
+                      ),
+                    ),
+                  ),
                 ),
               ),
             ),
+          ),
 
 
 
