@@ -77,7 +77,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                     }
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("MACACAO",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("MACACÃO",style: TextStyle(fontSize: 30),),)
               ),
               ),
 

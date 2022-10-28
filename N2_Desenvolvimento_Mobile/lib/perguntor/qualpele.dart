@@ -28,7 +28,7 @@ class QualPeleInstance extends State<QualPele> {
                 alignment: Alignment.center,
                 padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
                 child: const Text(
-                    "QUAL A PELE?",
+                    "QUAL A COR DA PELE?",
                     style: TextStyle(fontSize: 40)),
               ),
 

@@ -41,7 +41,7 @@ class QualFundoInstance extends State<QualFundo> {
                     ProximaPergunta(context);
                   },
 
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Dorgas",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("Colorido",style: TextStyle(fontSize: 30),),)
               ),
               ),
 

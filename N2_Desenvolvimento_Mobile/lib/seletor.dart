@@ -28,7 +28,7 @@ class SeletorInstance extends State<Seletor> {
               alignment: Alignment.center,
               padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
               child: const Text(
-                  "Bem vindo ao Criador de Avatar!\n\nResponda as perguntas para criarmos seu avatar perfeito!",
+                  "Bem-vindo ao Criador de Avatar!\n\nResponda as perguntas para criarmos seu avatar perfeito!",
                   style: TextStyle(
                       color: color2,
                       fontSize: 20
