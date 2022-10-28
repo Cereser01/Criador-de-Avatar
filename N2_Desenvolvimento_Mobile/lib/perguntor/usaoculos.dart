@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/tembrinco.dart';
-import 'package:n2_desenvolvimento_mobile/resultor.dart';
-import 'tembarba.dart';
+
 
 
 class UsaOculos extends StatefulWidget{
@@ -36,7 +34,7 @@ class UsaOculosInstance extends State<UsaOculos> {
                     style: TextStyle(fontSize: 40)),
               ),
 
-              Padding( padding: EdgeInsets.only(top: 20), child:
+              Padding( padding: const EdgeInsets.only(top: 20), child:
               ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
@@ -48,18 +46,18 @@ class UsaOculosInstance extends State<UsaOculos> {
                     ProximaPergunta(context);
                   },
 
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Sim",style: TextStyle(fontSize: 30),),)
+                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Sim",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
-              Padding( padding: EdgeInsets.only(top: 20), child:
+              Padding( padding: const EdgeInsets.only(top: 20), child:
               ElevatedButton(
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
                     oculos = blank;
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
+                  child: const Padding(padding: EdgeInsets.all(20),child:Text("Não",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -73,6 +71,11 @@ class UsaOculosInstance extends State<UsaOculos> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => TemBrinco()));
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Brinco"),
+      builder: (context) => TemBrinco(),
+    ),
+  );
 
 }

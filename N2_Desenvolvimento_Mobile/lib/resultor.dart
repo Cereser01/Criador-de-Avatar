@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:n2_desenvolvimento_mobile/seletor.dart';
 import 'main.dart';
 
 class Resultor extends StatefulWidget{
@@ -19,7 +20,7 @@ class ResultorInstance extends State<Resultor> {
         leading: Image.asset("logo.png"),
       ),
       body: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: ListView(
           children: [
           Container(
@@ -67,6 +68,20 @@ class ResultorInstance extends State<Resultor> {
               ),
             ),
           ),
+
+            Container(
+              padding: const EdgeInsets.only(top: 40),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
+                child: const Padding(padding: EdgeInsets.all(15), child: Text(
+                  "Voltar ao começo",
+                  style: TextStyle(fontSize: 30),),),
+                onPressed: () {
+                  Navigator.of(context).popUntil(ModalRoute.withName("/Fundo"));
+                  Navigator.pop(context);
+                },
+              ),
+            )
 
 
 

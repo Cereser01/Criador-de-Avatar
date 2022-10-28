@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/qualroupa.dart';
-import 'package:n2_desenvolvimento_mobile/resultor.dart';
 
 class TemBrinco extends StatefulWidget{
   const TemBrinco({Key? key}) : super(key: key);
@@ -70,7 +69,12 @@ class TemBrincoInstance extends State<TemBrinco> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => QualRoupa()));
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Roupa"),
+      builder: (context) => QualRoupa(),
+    ),
+  );
 
 }
 

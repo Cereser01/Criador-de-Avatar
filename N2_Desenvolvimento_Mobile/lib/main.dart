@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/qualfundo.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/qualpele.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/qualroupa.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/tembrinco.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
+import 'package:n2_desenvolvimento_mobile/perguntor/usaoculos.dart';
+import 'package:n2_desenvolvimento_mobile/resultor.dart';
 import 'seletor.dart';
-import 'resultor.dart';
 
 const color1 = Colors.grey;
 const color2 = Colors.black;
@@ -42,11 +49,18 @@ const macacao_Male = DecorationImage(image: AssetImage("macacao_male.png"));
 const camiseta_Fem = DecorationImage(image: AssetImage("camiseta_preta_female.png"));
 const camiseta_Male = DecorationImage(image: AssetImage("camiseta_preta_male.png"));
 
-var pele_Fem = DecorationImage(image: AssetImage("pele_female.png"));
-var pele_Male = DecorationImage(image: AssetImage("pele_male.png"));
+const pele_vermelho_Fem = DecorationImage(image: AssetImage("pele_female.png"));
+const pele_vermelho_Male = DecorationImage(image: AssetImage("pele_male.png"));
+const pele_rosa_Fem = DecorationImage(image: AssetImage("pele_rosa_female.png"));
+const pele_rosa_Male = DecorationImage(image: AssetImage("pele_rosa_male.png"));
+const pele_verde_Fem = DecorationImage(image: AssetImage("pele_verde_female.png"));
+const pele_verde_Male = DecorationImage(image: AssetImage("pele_verde_male.png"));
+
+
 
 void main() {
   runApp(MaterialApp(
+    onGenerateRoute: routes,
     debugShowCheckedModeBanner: false,
     title: "App criador de Avatar",
     theme: ThemeData(
@@ -55,4 +69,68 @@ void main() {
     home: Seletor(),
   )
   ); //runApp
+}
+
+Route routes(RouteSettings settings) {
+  if (settings.name == '/Seletor') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return Seletor();
+      },
+    );
+  } else if (settings.name == '/Fundo') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return QualFundo();
+      },
+    );
+  } else if (settings.name == '/Corpo') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return TipoCorpo();
+      },
+    );
+  } else if (settings.name == '/Pele') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return QualPele();
+      },
+    );
+  } else if (settings.name == '/Barba') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return TemBarba();
+      },
+    );
+  } else if (settings.name == '/Oculos') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return UsaOculos();
+      },
+    );
+  } else if (settings.name == '/Brinco') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return TemBrinco();
+      },
+    );
+  } else if (settings.name == '/Roupa') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return QualRoupa();
+      },
+    );
+  } else if (settings.name == '/Resultor') {
+    return MaterialPageRoute(
+      builder: (context) {
+        return Resultor();
+      },
+    );
+  }  else {
+    return MaterialPageRoute(
+      builder: (context) {
+        return Seletor();
+      },
+    );
+  }
 }

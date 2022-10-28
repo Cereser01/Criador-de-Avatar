@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/qualfundo.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
 import 'main.dart';
 
 class Seletor extends StatefulWidget{
@@ -45,10 +44,7 @@ class SeletorInstance extends State<Seletor> {
                   "Começar",
                   style: TextStyle(fontSize: 30),),),
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => QualFundo())
-                  );
+                  ProximaPergunta(context);
                 },
               ),
             )
@@ -59,5 +55,16 @@ class SeletorInstance extends State<Seletor> {
     );
   }
 
+
+}
+
+void ProximaPergunta (context){
+
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Fundo"),
+      builder: (context) => QualFundo(),
+    ),
+  );
 
 }

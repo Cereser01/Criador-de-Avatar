@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/qualpele.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
 import 'package:n2_desenvolvimento_mobile/resultor.dart';
 
 class QualRoupa extends StatefulWidget{
@@ -80,7 +77,7 @@ class QualRoupaInstance extends State<QualRoupa> {
                     }
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("MACACO",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("MACACAO",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -110,7 +107,12 @@ class QualRoupaInstance extends State<QualRoupa> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => Resultor()));
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Resultor"),
+      builder: (context) => Resultor(),
+    ),
+  );
 
 }
 

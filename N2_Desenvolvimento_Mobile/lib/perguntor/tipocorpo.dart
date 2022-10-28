@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/qualpele.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
-import 'package:n2_desenvolvimento_mobile/resultor.dart';
-import 'usaoculos.dart';
 
 class TipoCorpo extends StatefulWidget{
   const TipoCorpo({Key? key}) : super(key: key);
@@ -67,6 +64,11 @@ class TipoCorpoInstance extends State<TipoCorpo> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => QualPele()));
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Pele"),
+      builder: (context) => QualPele(),
+    ),
+  );
 
 }

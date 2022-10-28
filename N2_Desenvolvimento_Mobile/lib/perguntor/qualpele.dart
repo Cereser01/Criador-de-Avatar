@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/tembarba.dart';
-import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
-import 'package:n2_desenvolvimento_mobile/resultor.dart';
 
 class QualPele extends StatefulWidget{
   const QualPele({Key? key}) : super(key: key);
@@ -40,9 +38,9 @@ class QualPeleInstance extends State<QualPele> {
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
                     if(corpo == body_Male){
-                      pele = pele_Male;
+                      pele = pele_vermelho_Male;
                     }else{
-                      pele = pele_Fem;
+                      pele = pele_vermelho_Fem;
                     }
                     ProximaPergunta(context);
                   },
@@ -73,13 +71,29 @@ class QualPeleInstance extends State<QualPele> {
                   style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
                   onPressed: (){
                     if(corpo == body_Male){
-                      pele = blank;
+                      pele = pele_verde_Male;
                     }else{
-                      pele = blank;
+                      pele = pele_verde_Fem;
                     }
                     ProximaPergunta(context);
                   },
-                  child: Padding(padding: EdgeInsets.all(20),child:Text("MACACO",style: TextStyle(fontSize: 30),),)
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("VERDE",style: TextStyle(fontSize: 30),),)
+              ),
+              ),
+
+              //BOTÃO DE RESPOSTA 4
+              Padding( padding: EdgeInsets.only(top: 20), child:
+              ElevatedButton(
+                  style: ButtonStyle(backgroundColor: MaterialStateProperty.all(color2)),
+                  onPressed: (){
+                    if(corpo == body_Male){
+                      pele = pele_rosa_Male;
+                    }else{
+                      pele = pele_rosa_Fem;
+                    }
+                    ProximaPergunta(context);
+                  },
+                  child: Padding(padding: EdgeInsets.all(20),child:Text("ROSA",style: TextStyle(fontSize: 30),),)
               ),
               ),
 
@@ -93,7 +107,12 @@ class QualPeleInstance extends State<QualPele> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => TemBarba()));
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Barba"),
+      builder: (context) => TemBarba(),
+    ),
+  );
 
 }
 

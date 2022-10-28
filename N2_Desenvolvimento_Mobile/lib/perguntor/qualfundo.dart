@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:n2_desenvolvimento_mobile/main.dart';
 import 'package:n2_desenvolvimento_mobile/perguntor/tipocorpo.dart';
-import 'package:n2_desenvolvimento_mobile/resultor.dart';
 
 class QualFundo extends StatefulWidget{
   const QualFundo({Key? key}) : super(key: key);
@@ -94,7 +93,12 @@ class QualFundoInstance extends State<QualFundo> {
 
 void ProximaPergunta (context){
 
-  Navigator.push(context, MaterialPageRoute(builder: (context) => TipoCorpo()));
+  Navigator.of(context).push(
+    MaterialPageRoute(
+      settings: RouteSettings(name: "/Corpo"),
+      builder: (context) => TipoCorpo(),
+    ),
+  );
 
 }
 
